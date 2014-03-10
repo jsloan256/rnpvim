@@ -81,11 +81,11 @@
 "												\'zsh',
 "												\'html'],
 "							\ 'passive_filetypes': [] }
-"
+
 "set statusline+=%#warningmsg#
 "set statusline+=%{SyntasticStatuslineFlag()}
 "set statusline+=%*
-"
+
 "" 8 - Tabular
 "" TODO: setup config
 "
@@ -178,60 +178,61 @@
 "
 "let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'tagbar']
 "
-"" 17 - vim-signify
-""      https://github.com/mhinz/vim-signify
-"let g:signify_vcs_list = [ 'git', 'svn', 'hg' ]
-"let g:signify_update_on_bufenter = 1
-"let g:signify_sign_change = '~'
-"let g:signify_sign_delete_first_line = '*'
+" 17 - vim-signify
+"      https://github.com/mhinz/vim-signify
+let g:signify_vcs_list = [ 'git', 'svn', 'hg' ]
+let g:signify_update_on_bufenter = 1
+let g:signify_sign_change = '~'
+let g:signify_sign_delete_first_line = '*'
+let g:signify_update_on_focusgained = 1
+
+highlight SignifySignAdd    cterm=bold ctermfg=green
+highlight SignifySignDelete cterm=bold ctermfg=red
+highlight SignifySignChange cterm=bold ctermfg=blue
+
+highlight SignifySignAdd    gui=bold  guifg=green
+highlight SignifySignDelete gui=bold  guifg=red
+highlight SignifySignChange gui=bold  guifg=darkorange
+
+" 18 - vim-airline
+"      https://github.com/bling/vim-airline
+" The powerline symbols need the powerline fonts:
+" https://github.com/Lokaltog/powerline-fonts
 "
-"highlight SignifySignAdd    cterm=bold ctermfg=green
-"highlight SignifySignDelete cterm=bold ctermfg=red
-"highlight SignifySignChange cterm=bold ctermfg=blue
-"
-"highlight SignifySignAdd    gui=bold  guifg=green
-"highlight SignifySignDelete gui=bold  guifg=red
-"highlight SignifySignChange gui=bold  guifg=darkorange
-"
-"" 18 - vim-airline
-""      https://github.com/bling/vim-airline
-"" The powerline symbols need the powerline fonts:
-"" https://github.com/Lokaltog/powerline-fonts
-""
-"" check whether a dictionary if it exists
-"if !exists('g:airline_symbols')
-"	let g:airline_symbols = {}
-"endif
-"
-"" fix messed up symbols
-"let g:airline_symbols.space = "\ua0"
-"
-"" enable/disable enhanced tabline.
-"let g:airline#extensions#tabline#enabled = 1
-"
-"" enable/disable displaying buffers with a single tab.
-"let g:airline#extensions#tabline#show_buffers = 1
-"
-"" configure how numbers are calculated in tab mode.
-"let g:airline#extensions#tabline#tab_nr_type = 1 " tab number
-"
-"" enable paste detection
-"let g:airline_detect_paste=1
-"
-"" enable/disable automatic population of the `g:airline_symbols` dictionary
-"" with powerline symbols.
-"let g:airline_powerline_fonts=1
-"
-"" enable/disable fugitive/lawrencium integration
-"let g:airline#extensions#branch#enabled=1
-"
-"" change the text for when no branch is detected
-"let g:airline#extensions#branch#empty_message = ''
-"
-"" enable/disable eclim integration, which works well with the
-"" |airline-syntastic| extension. >
-"let g:airline#extensions#eclim#enabled = 0
-"
+" check whether a dictionary if it exists
+if !exists('g:airline_symbols')
+	let g:airline_symbols = {}
+endif
+
+" fix messed up symbols
+let g:airline_symbols.space = "\ua0"
+
+" enable/disable enhanced tabline.
+let g:airline#extensions#tabline#enabled = 1
+
+" enable/disable displaying buffers with a single tab.
+let g:airline#extensions#tabline#show_buffers = 1
+
+" configure how numbers are calculated in tab mode.
+let g:airline#extensions#tabline#tab_nr_type = 1 " tab number
+
+" enable paste detection
+let g:airline_detect_paste=1
+
+" enable/disable automatic population of the `g:airline_symbols` dictionary
+" with powerline symbols.
+let g:airline_powerline_fonts=1
+
+" enable/disable fugitive/lawrencium integration
+let g:airline#extensions#branch#enabled=1
+
+" change the text for when no branch is detected
+let g:airline#extensions#branch#empty_message = ''
+
+" enable/disable eclim integration, which works well with the
+" |airline-syntastic| extension. >
+let g:airline#extensions#eclim#enabled = 0
+
 "" 19 - fugitive
 ""      https://github.com/tpope/vim-fugitive
 "" TODO: Configure fugitive

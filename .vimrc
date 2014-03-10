@@ -114,10 +114,10 @@ source ~/.vim/config.vim
 " source ~/.vim/mappings.vim
 
 " Plugin-specific configuration.
-" source ~/.vim/plugins.vim
+ source ~/.vim/plugins.vim
 
 " Abbreviations
 "source ~/.vim/abbrev.vim
 
 " Autogroup/autocmd
-source ~/.vim/augroup.vim
+" source ~/.vim/augroup.vim
