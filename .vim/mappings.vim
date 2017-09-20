@@ -103,10 +103,6 @@ vnoremap <F5> "=strftime("%Y.%m.%d (%a) %H:%M:%S (UTC %z %Z)")<CR>P
 inoremap <F5> <C-R>=strftime("%Y.%m.%d (%a) %H:%M:%S (UTC %z %Z)")<CR>
 
 " Disable arrow keys in normal mode
-noremap <Left>  <Nop>
-noremap <Right> <Nop>
-noremap <Up>    <Nop>
-noremap <Down>  <Nop>
 
 " Use Q for formatting the current paragraph (or selection)
 vnoremap Q gq

@@ -158,7 +158,7 @@ set showbreak=↳              " Show the linebreak for a long line
 if exists("g:usercolorscheme")
 	execute 'colorscheme '. g:usercolorscheme
 else
-	colorscheme vimhut
+	colorscheme badwolf
 endif
 set noshowmode               " Don't show the mode, Powerline shows it
 set showmatch                " When a bracket is inserted, briefly jump to the matching one.

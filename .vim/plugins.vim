@@ -242,7 +242,6 @@ endif
 "let g:airline_symbols.linenr = ''
 
 " Set airline theme manually
-let g:airline_theme="kolor"
 " fix messed up symbols
 " TODO: test it under windows
 if has('unix')
