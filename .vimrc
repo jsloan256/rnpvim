@@ -33,3 +33,5 @@ source ~/.vim/abbrev.vim
 
 " Autogroup/autocmd
 source ~/.vim/augroup.vim
+
+execute 'colorscheme '. 'badwolf'
